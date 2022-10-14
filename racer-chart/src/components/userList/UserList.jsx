@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import UserDetails from "components/UserDetails/UserDetails";
-import s from "components/userList/UserList.module.css";
+import UserDetails from "../UserDetails/UserDetails";
+import s from "../userList/UserList.module.css";
 
 function UserList({ users }) {
   const [isActive, setIsActive] = useState(-1);

@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import { getUserData } from 'components/api/getUsersAPI';
-import UserList from 'components/userList/UserList';
-import s from 'components/App.module.css';
+import { useState, useEffect, useRef } from "react";
+import { getUserData } from "./api/getUsersAPI";
+import UserList from "./userList/UserList";
+import s from "./App.module.css";
 
 export const App = () => {
   const [users, setUsers] = useState([]);
@@ -10,14 +10,14 @@ export const App = () => {
   const pageHasChangedRef = useRef(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     if (pageHasChangedRef.current) {
       getUserData(page)
-        .then(newUsers => setUsers(users => [...users, ...newUsers]))
+        .then((newUsers) => setUsers((users) => [...users, ...newUsers]))
         .then(setIsLoading(false));
       return;
     }
@@ -30,7 +30,7 @@ export const App = () => {
         document.documentElement.scrollTop <=
       document.documentElement.clientHeight;
     if (isAtBottom) {
-      setPage(page => page + 1);
+      setPage((page) => page + 1);
       setIsLoading(true);
     }
   };

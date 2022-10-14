@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getLapTime, getPenaltyTime } from 'components/utils/randomData';
-import s from 'components/UserDetails/UserDetails.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import { getLapTime, getPenaltyTime } from "../utils/randomData";
+import s from "../UserDetails/UserDetails.module.css";
 
 function UserDetails({ data, active, onClick }) {
   const {
@@ -18,7 +18,7 @@ function UserDetails({ data, active, onClick }) {
     onClick(uuid);
   };
 
-  const activeItem = active === uuid ? s.isActive : '';
+  const activeItem = active === uuid ? s.isActive : "";
 
   return (
     <li className={`${s.userItem} ${activeItem}`} onClick={handleClick}>
@@ -34,7 +34,7 @@ function UserDetails({ data, active, onClick }) {
             {lapTime} | {String(postcode).slice(0, 2)}км/ч
           </span>
           <span className={s.penaltyTime}>
-            штрафное время {penaltyTime ? penaltyTime : '00:00:00'}
+            штрафное время {penaltyTime ? penaltyTime : "00:00:00"}
           </span>
         </div>
       </div>
