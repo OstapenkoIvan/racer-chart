@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/racer-chart/static/css/main.13636b5c.css",
+    "main.js": "/racer-chart/static/js/main.1fcb0dcd.js",
+    "index.html": "/racer-chart/index.html",
+    "main.13636b5c.css.map": "/racer-chart/static/css/main.13636b5c.css.map",
+    "main.1fcb0dcd.js.map": "/racer-chart/static/js/main.1fcb0dcd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13636b5c.css",
+    "static/js/main.1fcb0dcd.js"
+  ]
+}
