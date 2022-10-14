@@ -1,0 +1,64 @@
+.userItem {
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.userItem:before {
+  counter-increment: list;
+  content: counter(list);
+  margin-right: 15px;
+  font-weight: 600;
+  color: black;
+  transition: color 250ms ease;
+}
+
+.isActive.userItem:before {
+  color: blueviolet;
+}
+
+.userContainer {
+  display: flex;
+}
+
+.userName {
+  font-weight: 600;
+  text-overflow: ellipsis;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  outline: 4px solid transparent;
+  transition: outline 250ms ease;
+}
+
+.isActive.userItem .avatar {
+  border: 4px solid transparent;
+  outline: 4px solid blueviolet;
+}
+
+.thumb {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 15px;
+  gap: 5px;
+}
+
+.timeDetails {
+  font-weight: 500;
+  color: blueviolet;
+}
+
+.penaltyTime {
+  color: grey;
+  transition: color 250ms ease;
+}
+
+.isActive.userItem .penaltyTime {
+  color: orange;
+}

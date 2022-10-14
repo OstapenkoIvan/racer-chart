@@ -1,0 +1,4 @@
+.userList {
+  list-style: none;
+  counter-reset: list;
+}

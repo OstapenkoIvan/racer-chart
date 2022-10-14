@@ -1,0 +1,9 @@
+.container {
+  min-width: 320px;
+  max-width: 1920px;
+}
+
+.loading {
+  font-size: 18px;
+  text-align: center;
+}
